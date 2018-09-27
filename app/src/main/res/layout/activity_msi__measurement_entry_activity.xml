@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="au.com.infotrak.infotrakmobile.MSI_Screens.MSI_MeasurementEntryActivity"
+    android:id="@+id/MSI_MeasurementEntry_Layout">
+
+    <LinearLayout
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Title -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/llMSIMeasurementPoints_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Title, Component and Side -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/text_MSIMeasurementEntry_Side"
+                    android:textStyle="bold"
+                    android:text="Side ->" />
+
+                <TextView
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/text_MSIMeasurementEntry_Component"
+                    android:text="Component" />
+
+            </LinearLayout>
+
+            <!-- Measurement Point and Reading Percentage -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+                <TextView
+                    android:textColor="#333333"
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:id="@+id/text_MSIMeasurementEntry_MeasurementPoint"
+                    android:text="Measurement point"/>
+
+                <LinearLayout
+                    android:layout_weight="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_MSIMeasurementEntry_ReadingPct"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="20dp"
+                        android:minHeight="20dp"
+                        android:id="@+id/text_MSIMeasurementEntry_ReadingPct"
+                        android:textSize="18sp"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Main Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Measurements panel -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="12"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Image indicating the measurement to be taken -->
+                    <ImageView
+                        android:layout_weight="5"
+                        android:id="@+id/img_MSI_MPEntry_MeasurementToBeTaken"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp" />
+
+                    <!-- Measurement tool and readings -->
+                    <LinearLayout
+                        android:background="@drawable/layout_border"
+                        android:orientation="vertical"
+                        android:layout_weight="7"
+                        android:layout_width="0dp"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content">
+
+                        <!-- Measurement entry with tools (except Yes/No) -->
+                        <LinearLayout
+                            android:id="@+id/llMSIMeasurementEntry_Tool"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!-- Measurement Tool -->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="#333333"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:text="Measurement Tool"/>
+
+                                <RadioGroup
+                                    android:id="@+id/rg_MSI_MPEntry_Tool"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioButton
+                                        android:text="UT"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/rb_MSI_MPEntry_UT"
+                                        android:onClick="measurementToolSelection"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:text="DG"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/rb_MSI_MPEntry_DG"
+                                        android:onClick="measurementToolSelection"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:text="C"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/rb_MSI_MPEntry_C"
+                                        android:onClick="measurementToolSelection"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:text="R"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/rb_MSI_MPEntry_R"
+                                        android:onClick="measurementToolSelection"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:text="DLE"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:id="@+id/rb_MSI_MPEntry_DLE"
+                                        android:onClick="measurementToolSelection"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <!-- Reading / FREEZE -->
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textColor="#333333"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Reading:" />
+                                <LinearLayout
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/et_MSI_MPEntry_Reading"
+                                        android:background="@drawable/left_rounded_edittext_gray"
+                                        android:textSize="21sp"
+                                        android:padding="15dp"
+                                        android:inputType="numberDecimal"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:gravity="center"
+                                        android:layout_height="wrap_content" />
+                                    <EditText
+                                        android:id="@+id/et_MSI_MPEntry_Eval"
+                                        android:textColor="#000000"
+                                        android:textSize="21sp"
+                                        android:padding="15dp"
+                                        android:inputType="numberDecimal"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="58dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_toRightOf="@+id/et_MSI_MPEntry_Reading"
+                                        android:text="0%"
+                                        android:gravity="center"
+                                        android:enabled="false" />
+                                    <Button
+                                        android:background="@drawable/rounded_button_grey"
+                                        android:textColor="#FFFFFF"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:textSize="18sp"
+                                        android:text="Freeze"
+                                        android:id="@+id/btnMSIMeasurementEntry_Freeze"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Bluetooth status -->
+                            <LinearLayout
+                                android:id="@+id/llMSIMeasurementEntry_BTStatus"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <ImageView
+                                    android:id="@+id/iv_MSI_MPEntry_BTStatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:textColor="#333333"
+                                    android:id="@+id/text_MSI_MPEntry_BTStatus"
+                                    android:text=""
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                            <!-- Progress bar -->
+                            <LinearLayout
+                                android:id="@+id/llMSIMeasurementEntry_UTProgressBar"
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/red"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar2"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/red"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar3"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/red"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar4"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/red"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar5"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/red"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar6"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/green"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar7"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/green"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar8"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/green"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar9"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/green"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:id="@+id/img_MSI_MPEntry_ProgressBar10"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/green"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+
+                            <!-- Reading # -->
+                            <LinearLayout
+                                android:id="@+id/msi_measurement_reading_no"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="#333333"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:text="Reading #"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioGroup
+                                    android:id="@+id/rg_MSI_MPEntry_ReadingNumber"
+                                    android:weightSum="5"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioButton
+                                        android:text="1"
+                                        android:id="@+id/rb_MSI_MPEntry_Reading_1"
+                                        android:onClick="readingNumberSelection"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:text="2"
+                                        android:id="@+id/rb_MSI_MPEntry_Reading_2"
+                                        android:onClick="readingNumberSelection"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:text="3"
+                                        android:id="@+id/rb_MSI_MPEntry_Reading_3"
+                                        android:onClick="readingNumberSelection"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:text="4"
+                                        android:id="@+id/rb_MSI_MPEntry_Reading_4"
+                                        android:onClick="readingNumberSelection"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:text="5"
+                                        android:id="@+id/rb_MSI_MPEntry_Reading_5"
+                                        android:onClick="readingNumberSelection"
+                                        android:textSize="20sp"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                </RadioGroup>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Observation, Yes/No tool -->
+                        <LinearLayout
+                            android:id="@+id/llMSIMeasurementEntry_YesNoTool"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#333333"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:text="Observation" />
+
+                            <RadioGroup
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:textStyle="bold"
+                                    android:text="Yes"
+                                    android:id="@+id/rb_MSI_MPEntry_Observation_Yes"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:textStyle="bold"
+                                    android:text="No"
+                                    android:id="@+id/rb_MSI_MPEntry_Observation_No"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <!-- Observation, KPO tool -->
+                        <LinearLayout
+                            android:id="@+id/llMSIMeasurementEntry_KPOTool"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:text="KPO"
+                                android:textSize="20sp"
+                                android:layout_weight="1"
+                                android:onClick="measurementToolSelection"
+                                android:layout_width="wrap_content"
+                                android:checked="true"
+                                android:layout_height="wrap_content" />
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <CheckBox
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:text="A"
+                                    android:id="@+id/rb_MSI_KPO_1"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content" />
+                                <CheckBox
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:text="B"
+                                    android:id="@+id/rb_MSI_KPO_2"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content" />
+                                <CheckBox
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:text="C"
+                                    android:id="@+id/rb_MSI_KPO_3"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content" />
+                                <CheckBox
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:text="D"
+                                    android:id="@+id/rb_MSI_KPO_4"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!-- Additional Images -->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Additional Images -->
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:text="Additional Images" />
+
+                    <!-- Placeholder for Images -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#333333"
+                                android:text="Image Title"
+                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
+                                android:maxLength="16"
+                                android:id="@+id/MSI_text_additional_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:id="@+id/MSI_img_additional_1"
+                                android:src="@drawable/add_image_box" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#333333"
+                                android:text="Image Title"
+                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
+                                android:maxLength="16"
+                                android:id="@+id/MSI_text_additional_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:id="@+id/MSI_img_additional_2"
+                                android:src="@drawable/add_image_box" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#333333"
+                                android:text="Image Title"
+                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
+                                android:maxLength="16"
+                                android:id="@+id/MSI_text_additional_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:id="@+id/MSI_img_additional_3"
+                                android:src="@drawable/add_image_box" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#333333"
+                                android:text="Image Title"
+                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
+                                android:maxLength="16"
+                                android:id="@+id/MSI_text_additional_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:id="@+id/MSI_img_additional_4"
+                                android:src="@drawable/add_image_box" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- General Notes -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="General Notes" />
+
+                    <EditText
+                        android:id="@+id/et_MSI_MPEntry_GeneralNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:focusable="false"
+                        android:background="@drawable/rounded_edittext_gray" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <include
+            layout="@layout/msi__bottom_bar">
+        </include>
+        <Button
+            android:id="@+id/btnMSIMeasurementEntry_Back"
+            style="@style/TTbutton1"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:text="Back" />
+        <Button
+            android:id="@+id/btnMSIMeasurementEntry_Next"
+            style="@style/TTbutton1"
+            android:layout_weight="1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/arrow_right_red"
+            android:minWidth="125dp"
+            android:text="Next" />
+    </RelativeLayout>
+</RelativeLayout>

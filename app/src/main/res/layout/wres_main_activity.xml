@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="What would you like to do?"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp" />
+    <Button
+        style="@style/wres_black_forward_button"
+        android:id="@+id/wres_btn_create_inspection"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Start New Workshop Repair Estimation"
+        android:backgroundTint="@color/uc_black"
+        android:onClick="launchNewWRES" />
+
+    <!-- Measurement Unit -->
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Measurement Unit" />
+        <RadioGroup
+            android:id="@+id/measurement_unit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="@string/text_inches"
+                android:layout_weight="1"
+                android:id="@+id/rb_measurement_unit_inches"
+                android:onClick="onUnitSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="@string/text_mm"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:id="@+id/rb_measurement_unit_mm"
+                android:onClick="onUnitSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Existing Workshop Repair Estimations"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TableLayout
+        android:id="@+id/wres_table_header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical" >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/chkbox"
+                android:text=""
+                android:layout_weight="2.5"
+            />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/customer"
+                android:text="Customer"
+                android:layout_weight="7"
+                />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/jobsite"
+                android:text="Jobsite"
+                android:layout_weight="12"
+                />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/type"
+                android:text="Type"
+                android:layout_weight="12"
+                />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/cust_ref"
+                android:text="Customer Ref"
+                android:layout_weight="12"
+                />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/status"
+                android:text="Status"
+                android:layout_weight="6"
+                />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/edit"
+                android:text=""
+                android:layout_weight="3"
+                />
+        </TableRow>
+    </TableLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <ScrollView
+            android:id="@+id/scroll_tbl_data"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="70dp">
+            <TableLayout
+                android:id="@+id/wres_main_table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TableLayout>
+        </ScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/uc_grey"
+            android:layout_alignParentBottom="true" >
+        </TextView>
+        <Button
+            android:id="@+id/main_table_back"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/uc_black"
+            android:textColor="@color/uc_white"
+            android:layout_alignParentBottom="true"
+            android:text="Remove\n from list"
+            android:onClick="removeFromList"/>
+        <Button
+            android:id="@+id/download_server_tables"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/uc_white"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/main_table_next"
+            android:text="Download\n Server Data"
+            android:onClick="downloadServerData" />
+        <Button
+            android:id="@+id/main_table_next"
+            android:drawableRight="@drawable/ic_check_white_24dp"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/uc_white"
+            android:backgroundTint="@color/login_button_red"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Sync Selected"
+            android:onClick="syncSelected" />
+    </RelativeLayout>
+</LinearLayout>

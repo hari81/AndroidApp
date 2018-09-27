@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wres_dip_test_modal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/wres_modal_left_img"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_add_a_photo_black_24dp"/>
+        <LinearLayout
+            android:id="@+id/wres_modal_type_detail"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/uc_black"
+                android:textStyle="bold"
+                android:text="PIN END MASTER" />
+            <TextView
+                android:id="@+id/wres_link_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/uc_black"
+                android:text="Standard" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/wres_modal_take_photo"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_add_a_photo_black_24dp" />
+        <LinearLayout
+            android:id="@+id/wres_modal_img_line1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wres_modal_img_line_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp">
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/uc_dark_grey"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="80dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="3.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dip Level"/>
+                    <EditText
+                        android:id="@+id/wres_dip_level"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/wres_text_comment"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:inputType="number"/>
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Condition"/>
+                    <Spinner
+                        android:id="@+id/wres_link_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:minWidth="150dp"
+                        android:spinnerMode="dialog"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/wres_dark_spinner" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/uc_dark_grey"/>
+
+                <LinearLayout
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Would you like to add any recommendations?"/>
+                    <EditText
+                        android:id="@+id/wres_recommendation"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/wres_text_comment"
+                        android:layout_marginTop="3dp"
+                        android:scrollbars="vertical"
+                        android:gravity="top"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Add a comment"/>
+                    <EditText
+                        android:id="@+id/wres_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/wres_text_comment"
+                        android:layout_marginTop="3dp"
+                        android:scrollbars="vertical"
+                        android:gravity="top"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <include
+            layout="@layout/wres_modal_bottom_bar">
+        </include>
+        <Button
+            android:id="@+id/wres_previous_pin"
+            android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/uc_white"
+            android:backgroundTint="@color/login_button_red"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/wres_next_pin"
+            android:text="Previous pin" />
+        <Button
+            android:id="@+id/wres_next_pin"
+            android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/uc_white"
+            android:backgroundTint="@color/login_button_red"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Next pin" />
+    </RelativeLayout>
+
+</LinearLayout>

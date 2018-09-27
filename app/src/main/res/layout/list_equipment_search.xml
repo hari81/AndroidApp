@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/infotrak_yellow"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+
+    <!-- Unit #-->
+    <TextView
+        android:id="@+id/txtUnitNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Unit No"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Serial # -->
+    <TextView
+        android:id="@+id/txtSerialNo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtUnitNo"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Serial No"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <au.com.infotrak.infotrakmobile.controls.CustomCheckBox
+        android:id="@+id/chkEquipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtSerialNo"
+        android:layout_alignRight="@+id/txtSerialNo"
+        android:layout_centerVertical="true"
+        android:text="" />
+
+
+</RelativeLayout>

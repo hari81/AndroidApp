@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button android:id="@+id/myButton"
+        android:text="Inspect"
+        android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+        android:layout_height="50px"
+        android:layout_width="150px"
+        android:textColor="@color/uc_white"
+        android:textSize="6pt"
+        android:backgroundTint="@color/login_button_red"
+        android:layout_alignParentTop="true"
+        android:onClick="launchInitialDetails"
+        android:gravity="top"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

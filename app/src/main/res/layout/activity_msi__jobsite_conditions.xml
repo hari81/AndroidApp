@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context="au.com.infotrak.infotrakmobile.MSI_Screens.MSI_JobsiteConditionsActivity"
+android:id="@+id/MSI_JobsiteConditions_Layout">
+    <TextView
+        android:textColor="#333333"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="@string/text_MSInspection_jobsiteConditions"
+        android:textSize="28sp"
+        android:id="@+id/textView3" />
+
+    <ScrollView
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView3"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <!-- Overall Observation comments -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="Overall Observation Comments" />
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="14sp"
+                        android:text="@string/text_MSI_JC_OverallObservationCommentsDesc"/>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_MSI_JC_overallObservationComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/rounded_edittext_gray" />
+            </LinearLayout>
+
+            <!-- Measurement Unit -->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Measurement Unit" />
+
+                <RadioGroup
+                    android:id="@+id/measurement_unit"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:text="@string/text_inches"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:id="@+id/rb_measurement_unit_inches"
+                        android:onClick="measurementUnitSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:text="@string/text_mm"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:id="@+id/rb_measurement_unit_mm"
+                        android:onClick="measurementUnitSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Checkboxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Low" />
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Moderate" />
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="High" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"></LinearLayout>
+                </LinearLayout>
+
+                <!-- Impact -->
+                <RadioGroup
+                    android:id="@+id/rg_MSI_JC_Impact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Impact" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Impact_Low"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Impact_Moderate"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Impact_High"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:id="@+id/img_MSI_JC_Impact"
+                        android:src="@mipmap/camera" />
+                </RadioGroup>
+
+                <!-- Abrasive -->
+                <RadioGroup
+                    android:id="@+id/rg_MSI_JC_Abrasive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Abrasive" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Abrasive_Low"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Abrasive_Moderate"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Abrasive_High"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:id="@+id/img_MSI_JC_Abrasive"
+                        android:src="@mipmap/camera" />
+                </RadioGroup>
+
+                <!-- Packing -->
+                <RadioGroup
+                    android:id="@+id/rg_MSI_JC_Packing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Packing" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Packing_Low"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Packing_Moderate"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Packing_High"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:id="@+id/img_MSI_JC_Packing"
+                        android:src="@mipmap/camera" />
+                </RadioGroup>
+
+                <!-- Moisture -->
+                <RadioGroup
+                    android:id="@+id/rg_MSI_JC_Moisture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Moisture" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Moisture_Low"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Moisture_Moderate"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_MSI_JC_Moisture_High"
+                        android:onClick="jobsiteConditionHandler"
+                        android:button="@drawable/checkbox_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:id="@+id/img_MSI_JC_Moisture"
+                        android:src="@mipmap/camera" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:textColor="#333333"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:text="Additional Images" />
+
+            <!-- Placeholder for Images -->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:text="Image Title"
+                        android:textSize="18dp"
+                        android:layout_marginBottom="5dp"
+                        android:maxLength="16"
+                        android:id="@+id/MSI_text_additional_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/MSI_img_additional_1"
+                        android:src="@drawable/add_image_box" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:text="Image Title"
+                        android:textSize="18dp"
+                        android:layout_marginBottom="5dp"
+                        android:maxLength="16"
+                        android:id="@+id/MSI_text_additional_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/MSI_img_additional_2"
+                        android:src="@drawable/add_image_box" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:text="Image Title"
+                        android:textSize="18dp"
+                        android:layout_marginBottom="5dp"
+                        android:maxLength="16"
+                        android:id="@+id/MSI_text_additional_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/MSI_img_additional_3"
+                        android:src="@drawable/add_image_box" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:text="Image Title"
+                        android:textSize="18dp"
+                        android:layout_marginBottom="5dp"
+                        android:maxLength="16"
+                        android:id="@+id/MSI_text_additional_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/MSI_img_additional_4"
+                        android:src="@drawable/add_image_box" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <include
+            layout="@layout/msi__bottom_bar">
+        </include>
+        <Button
+            android:id="@+id/btnMSIJobsiteConditions_Back"
+            style="@style/TTbutton1"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:text="Back" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

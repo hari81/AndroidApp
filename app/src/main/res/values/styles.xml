@@ -1,0 +1,161 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/InfoTrakActionBar</item>
+        <item name="actionBarStyle">@style/InfoTrakActionBar</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+    </style>
+    <!-- InfoTrak styles -->
+    <style name="InfoTrakDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/dialog_title_style</item>
+    </style>
+
+    <style name="dialog_title_style" parent="android:Widget.TextView">
+        <item name="android:background">#9EA2A2</item>
+        <item name="android:textColor">#FFFFFF</item>
+
+    </style>
+
+    <style name="InfoTrakActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#935550</item>
+        <item name="android:titleTextStyle">@style/MyActionBar.TitleTextStyle</item>
+        <item name="android:button">@drawable/abc_btn_switch_to_on_mtrl_00001</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/actionbar_background</item>
+        <item name="titleTextStyle">@style/MyActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="MyActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/cog</item>
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
+        <item name="android:contentDescription"></item>
+    </style>
+
+
+    <style name="TTbutton1">
+        <item name="android:background">#EB5757</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="wres_black_forward_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/uc_white</item>
+        <!--<item name="android:backgroundTint">#ff000000</item>-->
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_forward_black_24dp</item>
+    </style>
+
+    <style name="wres_add_long_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/uc_black</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:drawableRight">@drawable/ic_add_black_24dp</item>
+    </style>
+
+    <style name="wres_black_short_forward_button">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/uc_white</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_forward_black_24dp</item>
+    </style>
+
+    <style name="wres_black_short_button">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textColor">@color/uc_white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="wres_table_header">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">-2dp</item>
+        <!--<item name="android:textColor">@color/uc_white</item>-->
+        <!--<item name="android:background">#ff000000</item>-->
+    </style>
+
+    <style name="wres_action_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/login_button_red</item>
+        <item name="android:text">TrackTreads Undercarriage</item>
+        <item name="android:textColor">@color/uc_white</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <!--<item name="android:textStyle">bold</item>-->
+    </style>
+
+    <style name="wres_step_number">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/uc_white</item>
+        <item name="android:paddingLeft">17dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">9dp</item>
+    </style>
+
+    <style name="wres_step_line">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">3dp</item>
+        <item name="android:src">@drawable/ic_remove_black_24dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_marginLeft">-7dp</item>
+        <item name="android:layout_marginRight">-7dp</item>
+    </style>
+
+    <style name="wres_img_more">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <!--<item name="android:layout_marginRight">4dp</item>-->
+        <item name="android:layout_weight">1</item>
+        <item name="android:src">@drawable/ic_add_a_photo_black_24dp</item>
+    </style>
+
+    <color name="uc_white">#FFFFFF</color>
+    <color name="uc_login">#333333</color>
+    <color name="uc_lightgrey">#EDEDED</color>
+    <color name="uc_yellow">#fffb2b</color>
+    <color name="uc_red">#EB5757</color>
+    <color name="login_button_red">#EB5757</color>
+    <color name="uc_black">#ff000000</color>
+    <color name="uc_grey">#dfe3e8</color>
+    <color name="uc_dark_grey">#a6a8ab</color>
+    <color name="uc_green">#00cc00</color>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

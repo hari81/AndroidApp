@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="au.com.infotrak.infotrakmobile.MSI_Screens.MSI_MeasurementPointsActivity"
+    android:id="@+id/MSI_MeasurementPoints_Layout">
+
+    <LinearLayout
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Title -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/llMSIMeasurementPoints_Title"
+            android:layout_weight="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/text_MSIMeasurementPoints_Side"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="Side" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="3"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/tt_undercarriage_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/text_MSIMeasurementPoints_Component"
+                android:textStyle="bold"
+                android:text="+ Component" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/svMSIMeasurementPoints_Main"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/llMSIMeasurementPoints_Main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/componentImg"
+                    android:layout_width="600dp"
+                    android:layout_height="200dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <include
+            layout="@layout/msi__bottom_bar">
+        </include>
+        <Button
+            android:id="@+id/btnMSIMeasurementPoints_Back"
+            style="@style/TTbutton1"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:text="Back" />
+        <Button
+            android:id="@+id/btnMSIMeasurementPoints_Next"
+            style="@style/TTbutton1"
+            android:layout_weight="1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/arrow_right_red"
+            android:minWidth="125dp"
+            android:text="" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

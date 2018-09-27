@@ -1,0 +1,174 @@
+<resources>
+    <string name="app_name">Undercarriage Inspection</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_settings_language">Language Settings</string>
+    <string name="title_activity_equipment_details">Equipment Details</string>
+    <string name="title_activity_ucinspection">Inspection</string>
+    <string name="text_for_main_activity">Undercarriage Inspection</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_data_input">Data Input</string>
+    <string name="title_activity_equipment_search">Equipment Search</string>
+    <string name="Jobsite">Jobsite</string>
+    <string name="Model">Model</string>
+    <string name="title_activity_jobsite">Jobsite Conditions</string>
+    <string name="title_activity_splash">Splash Activity</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_equipment_add">Equipment Add</string>
+    <string name="title_activity_equipment_new_configuration">New Equipment Component Configuration</string>
+
+    <string name="new_equipment">New Equipment</string>
+    <string name="save_to_file">Save to File</string>
+    <string name="clear_equip_list">Clear Equipment List</string>
+    <string name="import_inspections">Import Rope Shovel Inspection</string>
+
+    <string name="lblUserName">Username</string>
+    <string name="lblRememberMe">Remember me</string>
+    <string name="lblLogin">Login</string>
+    <string name="lblPassword">Password</string>
+    <string name="select_equipment">Select Equipment:</string>
+    <string name="add_equipment">Add Equipment</string>
+    <string name="not_started">NOT STARTED</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="impact">Impact</string>
+
+    <string name="family">Family:</string>
+    <string name="dozer">Dozer</string>
+    <string name="model">Model:</string>
+    <string name="unit">Unit #:</string>
+    <string name="serial">Serial #:</string>
+    <string name="lblCustomer">Customer:</string>
+    <string name="lblJobsite">Jobsite:</string>
+    <string name="lblSMU">SMU:</string>
+
+    <string name="text_moisture">Moisture</string>
+    <string name="text_packing">Packing</string>
+    <string name="text_abrasive">Abrasive</string>
+    <string name="text_measure">Measure</string>
+    <string name="text_inches">Inches</string>
+    <string name="text_mm">mm</string>
+    <string name="text_left">Left</string>
+    <string name="text_right">Right</string>
+    <string name="text_track_sag">Track Sag:</string>
+    <string name="text_dry_joints">Dry Joints:</string>
+    <string name="text_ext_cannon">Ext. Cannon:</string>
+    <string name="text_chain_serial">Chain Serial #:</string>
+    <string name="text_inspection_comments">Inspection Comments</string>
+    <string name="text_jobsite_comments">Jobsite Comments</string>
+    <string name="text_link">Link</string>
+    <string name="text_bushing">Bushing</string>
+    <string name="text_shoe">Shoe</string>
+    <string name="text_idler">Idler</string>
+    <string name="text_front">Front</string>
+    <string name="text_rear">Rear</string>
+    <string name="text_sprocket">Sprocket</string>
+    <string name="text_carrier_roller">Carrier Roller</string>
+    <string name="text_track_roller">Track Roller</string>
+    <string name="text_sf">SF</string>
+    <string name="text_df">DF</string>
+    <string name="text_guard">Guard</string>
+    <string name="text_end_inspection">End Inspection</string>
+
+    <string name="text_language">Language</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_invalid_credentials">Error: Invalid credentials.</string>
+    <string name="text_not_latest_version">This is not the latest version. Please update your application</string>
+    <string name="text_not_latest_version_save_data">This is not the latest version. Please update your application. Press OK to save your data before updating the application</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_customer">Customer...</string>
+    <string name="text_left_side">LEFT SIDE</string>
+    <string name="text_right_side">RIGHT SIDE</string>
+    <string name="text_comments">Comments</string>
+    <string name="text_save">Save</string>
+
+
+    <string name="text_data_sync">Data Sync mode</string>
+    <string name="text_select_model">Select Model...</string>
+    <string name="text_data_loading">Data loading...</string>
+    <string name="text_shovel_data_loading">Starting Robe Shovel data synchronization...</string>
+    <string name="text_incomplete">Incomplete</string>
+    <string name="text_complete">Complete</string>
+    <string name="text_connecting_with_cygnus">Connecting with cygnus...</string>
+    <string name="text_freeze">Freeze</string>
+    <string name="text_unfreeze">Unfreeze</string>
+    <string name="text_equip_removal_prompt">Are you sure to remove the selected equipments from list?</string>
+    <string name="text_warning">Warning!</string>
+    <string name="text_equip_list_cleared">Equipment list cleared</string>
+    <string name="text_initialize_data_sync">Initializing Data Sync process...</string>
+    <string name="text_error_data_sync_initialize">Error during data sync initialization...</string>
+    <string name="text_add_equipment_to_see_details">Add Equipment to see details</string>
+    <string name="text_add_equip_first_step">Add Equipment is the first step</string>
+    <string name="text_select_equip_to_see_details">Select equipment to see details</string>
+    <string name="text_saving_data_to_file">Saving Data to File...</string>
+    <string name="text_directory_access_error">Unable to access directory to save data</string>
+    <string name="text_data_saving_error">There is an error while trying to save data. Delete the files and try saving again</string>
+    <string name="text_data_save_msg">Data Successfully Saved to files</string>
+    <string name="text_data_sync_error_server">There is an error while syncing the data</string>
+    <string name="text_sending_data">Sending data...</string>
+    <string name="text_data_sync_start">Starting data synchronization with server...</string>
+    <string name="text_no_inspection_to_sync">No inspection to be synchronized...</string>
+    <string name="text_no_rough_shovel_inspection_to_sync">No Robe Shovel inspection to be synchronized...</string>
+    <string name="text_data_sync_inprogress">Data Sync in Progress...</string>
+    <string name="text_error_connecting_server">There is an issue while connecting with the server</string>
+    <string name="text_device_cygnus_read_error">Device is not able to communicate with the cygnus tool. Please enter manually</string>
+    <string name="text_no_device">No device Connected</string>
+    <string name="text_tool_unavailable">Tool Un-available for component - no limits are set.</string>
+    <string name="text_reading">Reading:</string>
+    <string name="text_te">Track Elongation</string>
+
+    <string name="text_uc_inspector">Undercarriage Inspector</string>
+
+    <string name="text_note">NOTE!</string>
+    <string name="text_setup_rope_shovels">Rope Shovels must be setup on the \n web application and cannot be setup here!</string>
+    <string name="text_MSInspection_start">Start Inspection</string>
+    <string name="text_MSInspection_overall">Overall Equip.</string>
+    <string name="text_MSInspection_details">Inspection Details</string>
+    <string name="text_MSInspection_summary">Inspection Summary</string>
+    <string name="text_MSInspection_end">End Inspection</string>
+    <string name="text_MSInspection_equipmentInfo">Equipment Information</string>
+    <string name="text_MSInspection_jobsiteConditions">Jobsite Conditions</string>
+    <string name="text_MSInspection_equipmentPhotos">Equipment Photos</string>
+    <string name="text_MSInspection_leftSide">Left Side</string>
+    <string name="text_MSInspection_rightSide">Right Side</string>
+    <string name="text_MSInspection_trackShoes">Track Shoes</string>
+    <string name="text_MSInspection_trackRollers">Track Rollers</string>
+    <string name="text_MSInspection_tumblers">Tumblers</string>
+    <string name="text_MSInspection_frontIdlers">Front Idlers</string>
+    <string name="text_MSInspection_crawlerFrameGuide">Crawler Frame Guide</string>
+
+    <string name="text_MSI_EGN_EquipmentIsometricLeft">Equipment Isometric - Left</string>
+    <string name="text_MSI_EGN_EquipmentIsometricRight">Equipment Isometric - Right</string>
+    <string name="text_MSI_EGN_FrameSideViewLeft">Frame Side View - Left</string>
+    <string name="text_MSI_EGN_FrameSideViewRight">Frame Side View - Right</string>
+    <string name="text_MSI_EGN_FrameIsometricLeft">Frame Isometric - Left</string>
+    <string name="text_MSI_EGN_FrameIsometricRight">Frame Isometric - Right</string>
+
+    <string name="text_MSI_JC_OverallObservationCommentsDesc">Include overburden, ore, any change in the use of the shovel.</string>
+
+    <string name="title_activity_comments">Comments</string>
+    <string name="travel_hours">Travel</string>
+    <string name="forward">Forward</string>
+    <string name="reverse">Reverse</string>
+    <string name="scallop_measurement">Scallop\nMeasurement</string>
+    <string name="update">Update</string>
+    <string name="wres_data_folder">wres</string>
+    <string name="wres_step_one">Initial\nDetails</string>
+    <string name="wres_step_two">Measure\nComponents</string>
+    <string name="wres_step_three">Dip\nTests</string>
+    <string name="wres_step_four">Crack\nTests</string>
+    <string name="wres_step_five">Review &amp;\nSubmit</string>
+    <string name="wres_measure_tool_ut">UT</string>
+    <string name="wres_measure_tool_dg">DG</string>
+    <string name="wres_measure_tool_c">C</string>
+    <string name="wres_measure_tool_r">R</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

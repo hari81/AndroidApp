@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/infotrak_yellow"
+    android:orientation="horizontal"
+    android:padding="5dip"
+    android:id="@+id/compListLayout">
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout
+        android:id="@+id/compThumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:padding="3dip">
+
+        <ImageView
+            android:id="@+id/compIcon"
+            android:layout_width="50dip"
+            android:layout_height="30dip" />
+    </LinearLayout>
+
+    <!-- Title Of Song-->
+    <TextView
+        android:id="@+id/compName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/compThumb"
+        android:layout_toRightOf="@+id/compThumb"
+        android:text="Component"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/compID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/compName"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/compThumb"
+        android:text="Part #"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/compPreviousInspectionToolSymbol"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_marginRight="7dp"
+        android:layout_below="@id/compID"
+        android:layout_alignLeft="@id/compID"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/compPreviousInspectionReading"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_marginRight="7dp"
+        android:layout_below="@id/compID"
+        android:layout_toRightOf="@id/compPreviousInspectionToolSymbol"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:id="@+id/compPreviousInspectionWorn"
+        android:layout_below="@id/compID"
+        android:layout_toRightOf="@id/compPreviousInspectionReading"/>
+    <TextView
+        android:id="@+id/compPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/compName"
+        android:text="1"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Rightend Arrow -->
+    <TextView
+        android:id="@+id/evalCode"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="#FF0000"
+
+        android:gravity="center"
+        android:text="33%"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imgComment"
+        android:background="@mipmap/comment_blue"
+        android:layout_alignBottom="@+id/compID"
+        android:layout_toLeftOf="@+id/imgCamera"
+        android:layout_toStartOf="@+id/imgCamera"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imgCamera"
+        android:background="@mipmap/camera_green"
+        android:layout_alignBottom="@+id/compID"
+        android:layout_toLeftOf="@+id/txtReading"
+        android:layout_toStartOf="@+id/txtReading"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:visibility="invisible" />
+    <!--PRN9036-->
+    <TextView
+        android:id="@+id/txtReading"
+        android:layout_width="35dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/compID"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@+id/evalCode"
+        android:layout_toStartOf="@+id/evalCode"
+        android:gravity="center"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

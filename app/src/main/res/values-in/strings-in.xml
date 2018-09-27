@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Undercarriage Inspection</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="title_activity_equipment_details">Rincian Peralatan</string>
+    <string name="title_activity_ucinspection">Inspection</string>
+    <string name="text_for_main_activity">Undercarriage Inspection</string>
+    <string name="action_settings_language">Language Settings</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_data_input">Masukan Data</string>
+    <string name="title_activity_equipment_search">Pencarian Peralatan</string>
+    <string name="Jobsite">Lapangan</string>
+    <string name="Model">Model</string>
+    <string name="title_activity_jobsite">Kondisi Lapangan</string>
+    <string name="title_activity_splash">Splash Activity</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_equipment_add">Equipment Add</string>
+    <string name="title_activity_equipment_new_configuration">New Equipment Component Configuration</string>
+
+    <string name="new_equipment">Peralatan Baru</string>
+    <string name="save_to_file">Simpan ke Berkas</string>
+    <string name="clear_equip_list">Bersihkan Daftar Peralatan</string>
+
+    <string name="lblUserName">Nama Pengguna</string>
+    <string name="lblRememberMe">Ingatkan Saya</string>
+    <string name="lblLogin">Login</string>
+    <string name="lblPassword">kata sandi</string>
+    <string name="select_equipment">Pilih Peralatan:</string>
+    <string name="add_equipment">Adicionar equipamento</string>
+    <string name="not_started">Tidak Dimulai</string>
+    <string name="high">Tinggi</string>
+    <string name="medium">Sedang</string>
+    <string name="low">Rendah</string>
+    <string name="impact">Impact</string>
+
+    <string name="family">Keluarga:</string>
+    <string name="dozer">Dozer</string>
+    <string name="model">Model:</string>
+    <string name="unit">Unit #:</string>
+    <string name="serial">Seri #:</string>
+    <string name="lblCustomer">Pelanggan:</string>
+    <string name="lblJobsite">Jobsite:</string>
+    <string name="lblSMU">SMU:</string>
+
+
+
+    <string name="text_moisture">kelembaban</string>
+    <string name="text_packing">Packing</string>
+    <string name="text_abrasive">Abrasif</string>
+    <string name="text_measure">Mengukur</string>
+    <string name="text_inches">Inches</string>
+    <string name="text_mm">mm</string>
+    <string name="text_left">Kiri</string>
+    <string name="text_right">Kanan</string>
+    <string name="text_track_sag">Kekencangan Trek:</string>
+    <string name="text_dry_joints">Dry Joint:</string>
+    <string name="text_ext_cannon">Ext. Cannon:</string>
+    <string name="text_chain_serial">No. Seri Rantai:</string>
+    <string name="text_inspection_comments">Komentar Pemeriksaan</string>
+    <string name="text_jobsite_comments">Komentar Lapangan</string>
+    <string name="text_link">Link</string>
+    <string name="text_bushing">Bushing</string>
+    <string name="text_shoe">Shoe</string>
+    <string name="text_idler">Idler</string>
+    <string name="text_front">Depan</string>
+    <string name="text_rear">Belakang</string>
+    <string name="text_sprocket">Sprocket</string>
+    <string name="text_carrier_roller">Carrier Roller</string>
+    <string name="text_track_roller">Track Roller</string>
+    <string name="text_sf">SF</string>
+    <string name="text_df">DF</string>
+    <string name="text_guard">Guard</string>
+    <string name="text_end_inspection">Akhir Pemeriksaan</string>
+
+    <string name="text_language">Language</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_invalid_credentials">Kesalahan: Mandat tidak valid</string>
+    <string name="text_not_latest_version">Ini bukan versi terakhir. Silakan Update Aplikasi Anda</string>
+    <string name="text_not_latest_version_save_data">Ini bukan versi terakhir. Silakan Update Aplikasi Anda. Tekan OK untuk menympan data anda sebelum memperbaharui aplikasi</string>
+    <string name="text_cancel">Tunda</string>
+    <string name="text_customer">Pelanggan...</string>
+    <string name="text_left_side">Sisi Kiri</string>
+    <string name="text_right_side">Sisi Kanan</string>
+    <string name="text_comments">Komentar</string>
+    <string name="text_save">Simpan</string>
+
+    <string name="text_data_sync">Mode Sinkron Data</string>
+    <string name="text_select_model">Pilih Model...</string>
+    <string name="text_data_loading">Memuat data...</string>
+    <string name="text_incomplete">Tidak selesai</string>
+    <string name="text_complete">Selesai</string>
+    <string name="text_connecting_with_cygnus">Menghubungkan dengan cygnus...</string>
+    <string name="text_freeze">Tahan</string>
+    <string name="text_unfreeze">Lepaskan</string>
+    <string name="text_equip_removal_prompt">Apakah anda yakin akan menghapus peralatan terpilih dari daftar?</string>
+    <string name="text_warning">Peringatan!</string>
+    <string name="text_equip_list_cleared">Daftar peralatan dibersihkan</string>
+    <string name="text_initialize_data_sync">Memulai proses sinkronisasi data...</string>
+    <string name="text_error_data_sync_initialize">Kesalahan selama inisialisasi data...</string>
+    <string name="text_add_equipment_to_see_details">Tambah peralatan untuk melihat rincian</string>
+    <string name="text_add_equip_first_step">Tambah peralatan adalah langkah yang pertama</string>
+    <string name="text_select_equip_to_see_details">Pilih Peralatan untuk melihat rincian</string>
+    <string name="text_saving_data_to_file">Menyimpan data ke berkas...</string>
+    <string name="text_directory_access_error">Tidak mampu mengakses direktori untuk menyimpan data</string>
+    <string name="text_data_saving_error">Terjadi kesalahan ketika mencoba untuk menyimpan data. Buang berkas-berkas dan cobalah menyimpan lagi.</string>
+    <string name="text_data_save_msg">Data berhasil di simpan ke berkas-berkas</string>
+    <string name="text_data_sync_error_server">Terjadi kesalahan ketika menyelaraskan data</string>
+    <string name="text_sending_data">Mengirim data...</string>
+    <string name="text_data_sync_start">Memulai sinkronisasi data dengan server...</string>
+    <string name="text_no_inspection_to_sync">Tidak ada inspeksi yang akan disinkronkan...</string>
+    <string name="text_data_sync_inprogress">Sinkron data dalam proses...</string>
+    <string name="text_error_connecting_server">Terjadi isu ketika menghubungkan dengan server</string>
+    <string name="text_device_cygnus_read_error">Alat tidak mampu berkomunikasi dengan peralatan cygnus. Silakan dimasukkan secara manual</string>
+    <string name="text_no_device">tidak ada alat yang terhubung</string>
+    <string name="text_tool_unavailable">Alat tidak tersedia untuk komponen - tidak ada limit yang disimpan.</string>
+    <string name="text_reading">Membaca:</string>
+    <string name="text_te">Track Elongation</string>
+</resources>

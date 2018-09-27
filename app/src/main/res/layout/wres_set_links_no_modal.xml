@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wres_sync_validation_modal"
+    android:layout_width="350dp"
+    android:layout_height="220dp"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/uc_black">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="16dip">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16dip"
+        android:text="How many links are there on the chain?">
+    </TextView>
+    <EditText
+        android:id="@+id/wres_link_no"
+        android:layout_marginTop="5dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/wres_text_level"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/dialogButtonOK"
+            android:layout_marginBottom="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textColor="@color/uc_white"
+            android:backgroundTint="@color/login_button_red"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:id="@+id/wres_bottom_color"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/login_button_red"
+            android:layout_alignParentBottom="true" >
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,504 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/infotrak_yellow"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="au.com.infotrak.infotrakmobile.EquipmentDetailsActivity"
+    android:id="@+id/layoutMain"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/layoutSteps">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEquipmentSelection"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEquipmentDetails"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEquipmentConditions"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInspect"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSyncMenu"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutSteps">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <!-- Equipment Image -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/equipmentImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/addEquipmentImage"
+                    android:layout_width="240dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    android:text="Add Equipment Image" />
+
+            </LinearLayout>
+
+            <!-- Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <!-- Left -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="190dp"
+                    android:layout_weight="40"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout"
+                        android:layout_width="312dp"
+                        android:layout_height="190dp">
+
+                        <TextView
+                            android:id="@+id/labelFamily"
+                            android:layout_marginRight="22dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/family"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtFamily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/labelFamily"
+                            android:gravity="end"
+                            android:text="@string/dozer"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/labelModel"
+                            android:layout_marginRight="28dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/labelFamily"
+                            android:text="@string/model"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtModel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtFamily"
+                            android:layout_toRightOf="@id/labelModel"
+                            android:gravity="end"
+                            android:text="D9T"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:typeface="sans" />
+
+                        <!-- Unit No. -->
+                        <TextView
+                            android:id="@+id/labelUnitNo"
+                            android:layout_marginRight="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/labelModel"
+                            android:text="@string/unit"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtUnitNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtModel"
+                            android:layout_toRightOf="@id/labelUnitNo"
+                            android:gravity="end"
+                            android:text="Doz03"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:typeface="sans" />
+
+                        <!-- Serial No. -->
+                        <TextView
+                            android:id="@+id/labelSerialNo"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/labelUnitNo"
+                            android:text="@string/serial"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtSerialNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtUnitNo"
+                            android:layout_toRightOf="@id/labelSerialNo"
+                            android:gravity="end"
+                            android:text="ATY46285K"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:typeface="sans" />
+
+                        <!-- Customer -->
+                        <TextView
+                            android:id="@+id/labelCustomer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/labelSerialNo"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/lblCustomer"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtCustomer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtSerialNo"
+                            android:layout_toRightOf="@id/labelCustomer"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:typeface="sans" />
+
+                        <!-- Jobsite -->
+                        <TextView
+                            android:id="@+id/labelJobsite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/labelCustomer"
+                            android:text="@string/lblJobsite"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:layout_marginRight="20dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtJobsite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtCustomer"
+                            android:layout_toRightOf="@id/labelJobsite"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:typeface="sans" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- Right -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="193dp"
+                    android:layout_weight="60"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/updateEquipmentImage"
+                        android:text="Update Image"
+                        android:textAllCaps="false" />
+
+                    <RelativeLayout
+                        android:id="@+id/inputBoxes"
+                        android:layout_width="match_parent"
+                        android:layout_height="193dp"
+                        android:layout_marginLeft="20dp">
+
+                        <!-- SMU -->
+                        <TextView
+                            android:id="@+id/labelSMU"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/lblSMU"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <EditText
+                            android:id="@+id/editSMU"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/editTravelForwardHr"
+                            android:layout_alignTop="@+id/labelSMU"
+                            android:background="@drawable/edittextstyle"
+                            android:ellipsize="start"
+                            android:ems="8"
+                            android:gravity="center"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:id="@+id/travelHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/labelSMU"
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone"
+                            android:text="@string/travel_hours"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <!-- Forward Hr-->
+                        <TextView
+                            android:id="@+id/travelForward"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/travelHours"
+                            android:layout_marginTop="13dp"
+                            android:text="@string/forward"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+                        <EditText
+                            android:id="@+id/editTravelForwardHr"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/travelForward"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_toRightOf="@+id/travelForward"
+                            android:background="@drawable/edittextstyle"
+                            android:ellipsize="start"
+                            android:ems="8"
+                            android:gravity="center"
+                            android:inputType="number" />
+                        <TextView
+                            android:id="@+id/txtKm"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignBaseline="@id/editTravelForwardHr"
+                            android:layout_toRightOf="@+id/editTravelForwardHr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hr"/>
+
+                        <!-- Forward Km-->
+                        <EditText
+                            android:id="@+id/editTravelForwardKm"
+                            android:layout_marginRight="2dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/editTravelForwardHr"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/txtKm"
+                            android:background="@drawable/edittextstyle"
+                            android:ellipsize="start"
+                            android:ems="8"
+                            android:gravity="center"
+                            android:inputType="number" />
+                        <TextView
+                            android:layout_alignBaseline="@id/editTravelForwardHr"
+                            android:layout_toRightOf="@+id/editTravelForwardKm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Km"/>
+
+                        <!-- Reverse Hr-->
+                        <TextView
+                            android:id="@+id/travelReverse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/travelForward"
+                            android:text="@string/reverse"
+                            android:textColor="#040404"
+                            android:textSize="15dip"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <EditText
+                            android:id="@+id/editTravelReverseHr"
+                            android:layout_marginRight="2dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/travelReverse"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/travelReverse"
+                            android:background="@drawable/edittextstyle"
+                            android:ellipsize="start"
+                            android:ems="8"
+                            android:gravity="center"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:id="@+id/txtReverseKm"
+                            android:layout_marginRight="12dp"
+                            android:layout_alignBaseline="@id/editTravelReverseHr"
+                            android:layout_toRightOf="@+id/editTravelReverseHr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hr"/>
+
+                        <!-- Reverse Km-->
+                        <EditText
+                            android:id="@+id/editTravelReverseKm"
+                            android:layout_marginRight="2dp"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/txtReverseKm"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/txtReverseKm"
+                            android:background="@drawable/edittextstyle"
+                            android:ellipsize="start"
+                            android:ems="8"
+                            android:gravity="center"
+                            android:inputType="number" />
+                        <TextView
+                            android:layout_alignBaseline="@id/editTravelReverseKm"
+                            android:layout_toRightOf="@+id/editTravelReverseKm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Km"/>
+
+                        <Button
+                            android:id="@+id/btnInspection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/btnBack"
+                            android:text="Inspect"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btnBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toLeftOf="@+id/btnInspection"
+                            android:layout_toStartOf="@+id/btnInspection"
+                            android:text="Back"
+                            android:visibility="gone" />
+
+                        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@id/editSMU"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@id/travelHours"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/byHour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/editSMU"
+                                android:layout_alignTop="@+id/travelHours"
+                                android:checked="true"
+                                android:text="Hours" />
+
+                            <RadioButton
+                                android:id="@+id/byKms"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/travelHours"
+                                android:layout_toEndOf="@+id/byHour"
+                                android:text="Kms" />
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Logo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mapImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

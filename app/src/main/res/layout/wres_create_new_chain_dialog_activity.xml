@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="550dp"
+    android:layout_height="390dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="17dp"
+        android:textSize="16sp"
+        android:text="Please assign customer and jobsite for this inspection">
+    </TextView>
+    <au.com.infotrak.infotrakmobile.controls.ClearableAutoCompleteTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/autoCustomer"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="50dp"
+        android:hint="Select customer..." />
+    <Spinner
+        android:id="@+id/cboJobsite"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/autoCustomer"
+        android:spinnerMode="dialog"
+        android:prompt="@string/Jobsite"
+        android:visibility="invisible" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/uc_grey">
+        </TextView>
+        <Button
+            android:id="@+id/create_new_chain_cancel"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/uc_white"
+            android:text="Cancel"
+            android:onClick="onCancel" />
+        <Button
+            android:id="@+id/create_new_chain_done"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/uc_white"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/login_button_red"
+            android:layout_alignParentRight="true"
+            android:text="Done"
+            android:onClick="onDone" />
+    </RelativeLayout>
+</LinearLayout>

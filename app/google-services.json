@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "540737724442",
+    "firebase_url": "https://undercarriage-mobile-android.firebaseio.com",
+    "project_id": "undercarriage-mobile-android",
+    "storage_bucket": "undercarriage-mobile-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540737724442:android:a00e57dabfdfebb4",
+        "android_client_info": {
+          "package_name": "au.com.infotrak.infotrakmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540737724442-fc9ibp9pkln9cfqe1lh48sbrbg9opo2k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "au.com.infotrak.infotrakmobile",
+            "certificate_hash": "f315ea0c0c7e028e44736aa5f1bceb8902686ed3"
+          }
+        },
+        {
+          "client_id": "540737724442-6tau8gan52a0p7tgt4o4elf8tbfes7vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVbAM1j72s4surxnkByiL9ecn7Hv1MXc8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540737724442-6tau8gan52a0p7tgt4o4elf8tbfes7vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

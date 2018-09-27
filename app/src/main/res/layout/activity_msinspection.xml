@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="au.com.infotrak.infotrakmobile.MSI_Screens.MSInspectionActivity"
+android:id="@+id/MSInspectionLayout">
+
+    <!-- Nav buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:minHeight="60dp"
+        android:layout_marginBottom="20dp"
+
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/llMSInspection_Steps">
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="42dp"
+            android:minHeight="42dp"
+            android:textSize="18sp"
+            android:paddingRight="17dp"
+            android:background="@drawable/arrow_right_red"
+            android:layout_marginRight="17dp"
+            style="@style/TTbutton1"
+            android:text="Overview"
+            android:textAllCaps="false"
+            android:id="@+id/btnMSInspection_Start"/>
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="42dp"
+            android:minHeight="42dp"
+            android:textSize="18sp"
+            android:paddingRight="17dp"
+            android:background="@drawable/arrow_right_red"
+            android:layout_marginRight="17dp"
+            style="@style/TTbutton1"
+            android:text="Initial Details"
+            android:textAllCaps="false"
+            android:id="@+id/btnMSInspection_Overall"/>
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="42dp"
+            android:minHeight="42dp"
+            android:textSize="18sp"
+            android:paddingRight="17dp"
+            android:background="@drawable/arrow_right_red"
+            android:layout_marginRight="20dp"
+            style="@style/TTbutton1"
+            android:text="Components"
+            android:textAllCaps="false"
+            android:id="@+id/btnMSInspection_Details"/>
+
+        <Button
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="42dp"
+            android:minHeight="42dp"
+            android:textSize="13sp"
+            android:background="@drawable/arrow_right_red"
+            android:layout_marginRight="5dp"
+            style="@style/TTbutton1"
+            android:text="@string/text_MSInspection_summary"
+            android:textAllCaps="false"
+            android:id="@+id/btnMSInspection_Summary"/>
+
+        <Button
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="42dp"
+            android:minHeight="42dp"
+            android:textSize="14sp"
+            android:background="@drawable/arrow_right_red"
+            style="@style/TTbutton1"
+            android:text="@string/text_MSInspection_end"
+            android:textAllCaps="false"
+            android:id="@+id/btnMSInspection_End"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llMSInspection_Steps"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="21">
+
+            <!-- General Information -->
+            <TextView
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:textSize="24sp"
+                android:id="@+id/text_MSInspection_GeneralInformation"
+                android:text="@string/text_MSInspection_equipmentInfo" />
+
+            <!-- Equipment General Notes -->
+            <TextView
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:textSize="24sp"
+                android:id="@+id/text_MSInspection_EquipmentGeneralNotes"
+                android:text="@string/text_MSInspection_equipmentPhotos" />
+
+            <!-- Jobsite Conditions -->
+            <TextView
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:textSize="24sp"
+                android:id="@+id/text_MSInspection_JobsiteConditions"
+                android:text="@string/text_MSInspection_jobsiteConditions" />
+
+            <!-- Left and Right side components -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="18"
+                android:weightSum="2"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <!-- Left side -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:weightSum="5"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/text_MSInspection_leftSide"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_trackShoes_L"
+                        android:text="@string/text_MSInspection_trackShoes"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_trackRollers_L"
+                        android:text="@string/text_MSInspection_trackRollers"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_tumblers_L"
+                        android:text="@string/text_MSInspection_tumblers"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_frontIdlers_L"
+                        android:text="@string/text_MSInspection_frontIdlers"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_crawlerFrameGuide_L"
+                        android:text="@string/text_MSInspection_crawlerFrameGuide"/>
+                </LinearLayout>
+
+                <!-- Right side -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:weightSum="5"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/text_MSInspection_rightSide"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_trackShoes_R"
+                        android:text="@string/text_MSInspection_trackShoes"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_trackRollers_R"
+                        android:text="@string/text_MSInspection_trackRollers"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_tumblers_R"
+                        android:text="@string/text_MSInspection_tumblers"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_frontIdlers_R"
+                        android:text="@string/text_MSInspection_frontIdlers"/>
+
+                    <TextView
+                        android:textColor="#333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tvMSInspection_crawlerFrameGuide_R"
+                        android:text="@string/text_MSInspection_crawlerFrameGuide"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <include
+            layout="@layout/msi__bottom_bar">
+        </include>
+        <Button
+            android:id="@+id/btnMSInspection_Back"
+            style="@style/TTbutton1"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:text="Back" />
+    </RelativeLayout>
+</RelativeLayout>

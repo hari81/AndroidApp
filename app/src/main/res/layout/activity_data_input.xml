@@ -1,0 +1,290 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/infotrak_yellow"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="au.com.infotrak.infotrakmobile.DataInput"
+    android:id="@+id/layoutMain">
+
+
+    <TextView
+        android:id="@+id/txtComponentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imgComponentMeasure"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="18dp"
+        android:layout_below="@+id/txtComponentName" />
+
+    <ImageView
+        android:id="@+id/imgProgressBar1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/red"
+        android:layout_marginTop="150dp"
+
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/imgProgressBar2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/red"
+        android:layout_marginTop="140dp"
+
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/imgProgressBar3"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/red"
+        android:layout_marginTop="130dp"
+
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/imgProgressBar4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/red"
+        android:layout_marginTop="120dp"
+
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/imgProgressBar5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/red"
+        android:layout_marginTop="110dp"
+
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/imgProgressBar6"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/green"
+        android:layout_marginTop="100dp"
+
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/imgProgressBar7"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/green"
+        android:layout_marginTop="90dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/imgProgressBar8"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/green"
+        android:layout_marginTop="80dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/imgProgressBar9"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/green"
+        android:layout_marginTop="70dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/imgProgressBar10"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/green"
+        android:layout_marginTop="60dp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/evalCode"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="80dp"
+        android:visibility="invisible"
+        android:background="#ff0000"
+        android:gravity="center"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtComponentMeasure"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/txtComponentName" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgComponentMeasure"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbUT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="true"
+            android:text="UT"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/rbDepthGauge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rbUT"
+            android:text="DG"
+            android:textColor="#000000"/>
+
+        <RadioButton
+            android:id="@+id/rbCalipers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rbUT"
+            android:text="C"
+            android:textColor="#000000"/>
+
+        <RadioButton
+            android:id="@+id/rbRuler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rbCalipers"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="R"
+            android:textColor="#000000"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_reading"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:textColor="#000000"
+         />
+
+    <EditText
+        android:id="@+id/txtReading"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@drawable/edittextstyle"
+        android:ellipsize="start"
+        android:ems="8"
+        android:gravity="center"
+        android:hint=""
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/radioGroup"
+        android:layout_toRightOf="@id/textView"
+        android:layout_marginLeft="10dp"
+
+        android:layout_marginBottom="10dp"/>
+
+
+
+    <EditText
+        android:id="@+id/txtComments"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="@drawable/edittextstyle"
+        android:ellipsize="start"
+        android:ems="10"
+        android:hint="@string/text_comments"
+        android:inputType="textMultiLine"
+        android:padding="2dp"
+        android:layout_below="@id/txtReading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+         />
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_save"
+        android:layout_below="@+id/btnFreeze"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/btnCamera"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/radioGroup"
+        android:background="@drawable/add_pic"
+        android:layout_alignBottom="@+id/txtReading"
+        />
+
+    <Button
+        android:id="@+id/btnFreeze"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:text="@string/text_freeze"
+        android:layout_below="@+id/txtComments" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/delete_pic"
+        android:id="@+id/btnDelPic"
+        android:layout_below="@+id/radioGroup"
+        android:layout_toLeftOf="@+id/btnCamera"
+        android:layout_alignBottom="@+id/btnCamera" />
+
+    <ImageView
+        android:id="@+id/bluetoothdisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.24"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/txtComponentName"
+        android:layout_marginTop="0dp" />
+</RelativeLayout>

@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+
+def getVersionCode = { ->
+
+    def code = project.hasProperty('versionCode') ? versionCode.toInteger() : 1
+    println "VersionCode is set to $code"
+    return code
+}
+
+def getVersionName = { ->
+    def name = project.hasProperty('versionName') ? versionName.toString() : '5.4.6RCTTTest'
+    //def name = project.hasProperty('versionName') ? versionName.toString() : '5.7.28RCTTTest'
+    println "VersionName is set to $name"
+    return name
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '28.0.2'
+    flavorDimensions "default"
+
+    defaultConfig {
+        applicationId "au.com.infotrak.infotrakmobile"
+        minSdkVersion 16
+        targetSdkVersion 16
+        versionCode getVersionCode()
+        versionName getVersionName()
+        //versionName '1.1.20RCTTTest'
+        //versionName '1.0.61RCTSLive'
+        //versionName '1.0.61RCITKDemo'
+        //versionName '1.0.65RCTSTest'
+        //versionName '1.0.61RCTTLive'
+        //versionName '1.0.61RCTTTest'
+        //versionName '1.0.62RCITMTest'
+        //versionName '1.0.61RCITMLive'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "tier"
+    productFlavors {
+        dev {
+            buildConfigField "String", "SERVICE_URL", "\"http://192.168.1.151/MobileService/MobileService.svc/\""
+            dimension "tier"
+        }
+        internaltest {
+            buildConfigField "String", "SERVICE_URL", "\"http://ucservice-devtest.tracktreads.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        staging {
+            buildConfigField "String", "SERVICE_URL", "\"http://ucservice-test.tracktreads.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        production {
+            buildConfigField "String", "SERVICE_URL", "\"http://ucservice.tracktreads.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        itmstaging {
+            buildConfigField "String", "SERVICE_URL", "\"http://uctest.trackadvice.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        itmproduction {
+            buildConfigField "String", "SERVICE_URL", "\"http://uc.trackadvice.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        bercostaging {
+            buildConfigField "String", "SERVICE_URL", "\"http://bercoucservice-test.tracktreads.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        bercoproduction {
+            buildConfigField "String", "SERVICE_URL", "\"http://bercoucservice.tracktreads.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        tracksparesstaging {
+            buildConfigField "String", "SERVICE_URL", "\"http://undercarriageservice-test.trackspares.com.au/MobileService.svc/\""
+            dimension "tier"
+        }
+        tracksparesproduction {
+            buildConfigField "String", "SERVICE_URL", "\"http://undercarriageservice.trackspares.com.au/MobileService.svc/\""
+            dimension "tier"
+        }
+        unittesting {
+            buildConfigField "String", "SERVICE_URL", "\"http://ucservice-unittesting.tracktreads.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        itrproduction {
+            buildConfigField "String", "SERVICE_URL", "\"http://itrucservice.tracktreads.com/MobileService.svc/\""
+            dimension "tier"
+        }
+        itrstaging {
+            buildConfigField "String", "SERVICE_URL", "\"http://itrucservice-test.tracktreads.com/MobileService.svc/\""
+            dimension "tier"
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+ext.kotlin_version = '1.2.51'
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('libs/gson-2.3.1.jar')
+    implementation files('libs/opencsv-3.7.jar')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:22.2.1'
+    implementation 'com.android.support:appcompat-v7:22.2.0'
+    implementation 'com.android.support:support-v4:22.2.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.google.firebase:firebase-crash:11.8.0'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.3'
+
+    // Required For JUnit4 testing
+    testImplementation 'junit:junit:4.12'
+
+    //For mocking using Mockito framework
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+
+    // Espresso
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+}
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'com.google.gms.google-services'

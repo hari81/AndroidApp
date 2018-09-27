@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/uc_grey"
+        android:layout_alignParentBottom="true" >
+    </TextView>
+    <Button
+        android:id="@+id/main_table_back"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/uc_white"
+        android:layout_alignParentBottom="true"
+        android:text="Back"
+        android:onClick="launchPreviousScreen"/>
+</RelativeLayout>

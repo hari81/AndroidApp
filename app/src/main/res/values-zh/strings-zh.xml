@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Undercarriage Inspection</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="action_settings_language">Language Settings</string>
+    <string name="title_activity_equipment_details">设备信息</string>
+    <string name="title_activity_ucinspection">Inspection</string>
+    <string name="text_for_main_activity">Undercarriage Inspection</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_data_input">数据输入</string>
+    <string name="title_activity_equipment_search">设备搜索</string>
+    <string name="Jobsite">作业场</string>
+    <string name="Model">Model</string>
+    <string name="title_activity_jobsite">作业场环境</string>
+    <string name="title_activity_splash">Splash Activity</string>
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_equipment_add">Equipment Add</string>
+    <string name="title_activity_equipment_new_configuration">New Equipment Component Configuration</string>
+
+    <string name="new_equipment">新设备</string>
+    <string name="save_to_file">保存到文件</string>
+    <string name="clear_equip_list">清除文件列表</string>
+
+    <string name="lblUserName">用户名</string>
+    <string name="lblRememberMe">记住我</string>
+    <string name="lblLogin">登录</string>
+    <string name="lblPassword">密码</string>
+    <string name="select_equipment">选择设备:</string>
+    <string name="add_equipment">增加设备</string>
+    <string name="not_started">没有开始</string>
+    <string name="high">高</string>
+    <string name="medium">中</string>
+    <string name="low">低</string>
+    <string name="impact">冲击</string>
+
+    <string name="family">家属系列：</string>
+    <string name="dozer">Dozer</string>
+    <string name="model">Model:</string>
+    <string name="unit">编号：</string>
+    <string name="serial">序列号：</string>
+    <string name="lblCustomer">客户:</string>
+    <string name="lblJobsite">Jobsite:</string>
+    <string name="lblSMU">仪表计时数:</string>
+
+    <string name="text_moisture">湿度</string>
+    <string name="text_packing">物料包裹性</string>
+    <string name="text_abrasive">侵蚀性</string>
+    <string name="text_measure">检测</string>
+    <string name="text_inches">Inches</string>
+    <string name="text_mm">mm</string>
+    <string name="text_left">左</string>
+    <string name="text_right">右边</string>
+    <string name="text_track_sag">履带下垂度:</string>
+    <string name="text_dry_joints">干链节:</string>
+    <string name="text_ext_cannon">油缸伸出:</string>
+    <string name="text_chain_serial">履带序列号 :</string>
+    <string name="text_inspection_comments">检测注释</string>
+    <string name="text_jobsite_comments">作业现场注释</string>
+    <string name="text_link">链节</string>
+    <string name="text_bushing">销套</string>
+    <string name="text_shoe">履带板</string>
+    <string name="text_idler">引导轮</string>
+    <string name="text_front">前</string>
+    <string name="text_rear">后</string>
+    <string name="text_sprocket">驱动齿</string>
+    <string name="text_carrier_roller">托链轮</string>
+    <string name="text_track_roller">支撑轮</string>
+    <string name="text_sf">单法兰</string>
+    <string name="text_df">双法兰</string>
+    <string name="text_guard">护板</string>
+    <string name="text_end_inspection">结束检测</string>
+
+    <string name="text_language">语言</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_invalid_credentials">错误：失效证书</string>
+    <string name="text_not_latest_version">这不是最新版本。请更新应用程序。</string>
+    <string name="text_not_latest_version_save_data">这不是最新版本。请更新应用程序。更新之前请点“OK”保存数据。</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_customer">客户...</string>
+    <string name="text_left_side">左边</string>
+    <string name="text_right_side">右边</string>
+    <string name="text_comments">意见</string>
+    <string name="text_save">保存</string>
+
+
+    <string name="text_data_sync">数据同步模式</string>
+    <string name="text_select_model">选择模式...</string>
+    <string name="text_data_loading">数据导入...</string>
+    <string name="text_incomplete">没有完成</string>
+    <string name="text_complete">完成</string>
+    <string name="text_connecting_with_cygnus">联接Cygnus仪器...</string>
+    <string name="text_freeze">锁定</string>
+    <string name="text_unfreeze">解锁</string>
+    <string name="text_equip_removal_prompt">确定移除表中所选设备吗？</string>
+    <string name="text_warning">警告!</string>
+    <string name="text_equip_list_cleared">设备清单清除</string>
+    <string name="text_initialize_data_sync">初始化数据同步进程...</string>
+    <string name="text_error_data_sync_initialize">初始化数据错误...</string>
+    <string name="text_add_equipment_to_see_details">增加设备以看细节内容</string>
+    <string name="text_add_equip_first_step">增加设备是第一步</string>
+    <string name="text_select_equip_to_see_details">选择设备以看细节内容</string>
+    <string name="text_saving_data_to_file">保存数据到文件...</string>
+    <string name="text_directory_access_error">没有获得保存数据路径</string>
+    <string name="text_data_saving_error">数据存储出现错误。删除文件，重新保存数据</string>
+    <string name="text_data_save_msg">数据成功保存到文件</string>
+    <string name="text_data_sync_error_server">同步数据时出现错误</string>
+    <string name="text_sending_data">Sending data...</string>
+    <string name="text_data_sync_start">和服务器开始数据同步...</string>
+    <string name="text_no_inspection_to_sync">没有检测数据可以同步...</string>
+    <string name="text_data_sync_inprogress">数据同步中...</string>
+    <string name="text_error_connecting_server">和服务器联接出现问题</string>
+    <string name="text_device_cygnus_read_error">设备不能通讯Cynus仪器。请手动输入</string>
+    <string name="text_no_device">设备没联上</string>
+    <string name="text_tool_unavailable">工具不适合-没有设置范围</string>
+    <string name="text_reading">读数:</string>
+    <string name="text_te">Track Elongation</string>
+</resources>

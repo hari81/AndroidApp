@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="au.com.infotrak.infotrakmobile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".InfoTrakApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label=""
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/usb_device_filter" />
+        </activity>
+        <activity
+            android:name=".EquipmentDetailsActivity"
+            android:label="@string/title_activity_equipment_details" />
+        <activity
+            android:name=".UCInspectionActivity"
+            android:label="@string/title_activity_ucinspection" />
+        <activity
+            android:name=".DataInput"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_data_input"
+            android:theme="@style/InfoTrakDialog" />
+        <activity
+            android:name=".EquipmentSearchActivity"
+            android:label="@string/title_activity_equipment_search"
+            android:theme="@style/InfoTrakDialog" />
+        <activity
+            android:name=".JobsiteActivity"
+            android:label="@string/title_activity_jobsite" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="Select Device"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".EquipmentAddActivity"
+            android:label="@string/title_activity_equipment_add" />
+        <activity
+            android:name=".EquipmentNewConfigurationActivity"
+            android:label="@string/title_activity_equipment_new_configuration" />
+        <activity
+            android:name=".Preferences"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar" />
+        <activity
+            android:name=".MSI_Screens.MSInspectionActivity"
+            android:label="Mining Shovel Inspection" />
+        <activity
+            android:name=".MSI_Screens.MSI_EquipmentInformationActivity"
+            android:label="General Information"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MSI_Screens.MSI_EquipmentPhotosActivity"
+            android:label="Equipment General Notes"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MSI_Screens.MSI_JobsiteConditionsActivity"
+            android:label="Jobsite Conditions"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MSI_Screens.MSI_ImageModalActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".MSI_Screens.MSI_AdditionalRecordsActivity"
+            android:label="Additional Records"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MSI_Screens.MSI_MeasurementPointsActivity"
+            android:label="Measurement Points"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MSI_Screens.MSI_MeasurementEntryActivity"
+            android:label="Measurement Entry"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MSI_Screens.MSI_MandatoryRecordsActivity"
+            android:label="Mandatory Records"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MSI_Screens.MSI_BlankActivity"
+            android:label="Undercarriage Inspection"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Comments"
+            android:label="@string/title_activity_comments"
+            android:theme="@style/InfoTrakDialog">
+        </activity>
+        <activity
+            android:name=".InspectionSelectionActivity"
+            android:label="TrackTreads Undercarriage"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/usb_device_filter" />
+        </activity>
+        <activity
+            android:name=".WRESScreens.WRESMainActivity"
+            android:label="" />
+        <activity
+            android:name=".WRESScreens.WRESTypesActivity"
+            android:label="TrackTreads Undercarriage" />
+        <activity
+            android:name=".WRESScreens.WRESEquipmentSelectionActivity"
+            android:label="TrackTreads Undercarriage" />
+        <activity
+            android:name=".WRESScreens.WRESInitialDetailsActivity"
+            android:label="TrackTreads Undercarriage"        />
+            <!--android:screenOrientation="landscape" />-->
+        <activity
+            android:name=".WRESScreens.WRESMeasureComponentsActivity"
+            android:label="TrackTreads Undercarriage"        />
+            <!--android:screenOrientation="landscape" />-->
+        <activity
+            android:name=".WRESScreens.WRESDipTestsActivity"
+            android:label="TrackTreads Undercarriage" />
+        <activity
+            android:name=".WRESScreens.WRESDipTestsModalActivity"
+            android:label="TrackTreads Undercarriage" />
+        <activity
+            android:name=".WRESScreens.WRESCrackTestsActivity"
+            android:label="TrackTreads Undercarriage" />
+        <activity
+            android:name=".WRESScreens.WRESReviewSubmitActivity"
+            android:label="TrackTreads Undercarriage" />
+        <activity
+            android:name=".WRESScreens.WRESCreateNewChainActivity"
+            android:label="TrackTreads Undercarriage" />
+        <activity
+            android:name=".WRESScreens.WRESCreateNewChainDetailActivity"
+            android:label="TrackTreads Undercarriage" />
+        <activity
+            android:name=".WRESScreens.WRESCreateNewChainDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+    </application>
+
+</manifest>

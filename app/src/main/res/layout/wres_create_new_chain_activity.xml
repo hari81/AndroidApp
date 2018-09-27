@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout">
+
+        <au.com.infotrak.infotrakmobile.controls.ClearableAutoCompleteTextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/autoCustomer"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="50dp"
+            android:hint="Select customer..." />
+
+        <Spinner
+            android:id="@+id/cboJobsite"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/autoCustomer"
+            android:spinnerMode="dialog"
+            android:prompt="@string/Jobsite"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <!-- Serial Number and Life -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Please enter some initial details about the chain"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:background="@color/uc_white"
+            android:src="@drawable/track_chains"
+            android:layout_marginRight="15dp" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serial Number" />
+            <EditText
+                android:id="@+id/wres_serial_no_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/search_edittext"
+                android:gravity="left" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Life (hours)" />
+            <EditText
+                android:id="@+id/wres_life_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/search_edittext"
+                android:gravity="left"
+                android:inputType="number"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Make and Model -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Who manufactured this chain?"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp" />
+
+    <RelativeLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <au.com.infotrak.infotrakmobile.controls.ClearableAutoCompleteTextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/autoMake"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="50dp"
+            android:hint="Select Make..." />
+
+        <Spinner
+            android:id="@+id/cboModel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/autoMake"
+            android:spinnerMode="dialog"
+            android:prompt="@string/Model"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/wres_bottom_bar">
+        </include>
+        <Button
+            android:id="@+id/main_table_next"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/uc_white"
+            android:backgroundTint="@color/login_button_red"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Next"
+            android:onClick="nextScreen"/>
+    </RelativeLayout>
+</LinearLayout>

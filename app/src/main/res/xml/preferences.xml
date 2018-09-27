@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+   <PreferenceCategory android:title="@string/text_data_sync">
+       <SwitchPreference
+           android:key="usb"
+           android:title="USB"
+           android:id="@+id/usb"/>
+       <SwitchPreference
+           android:key="bt"
+           android:title="Bluetooth"
+           android:id="@+id/bt"
+           />
+   </PreferenceCategory>
+    <PreferenceCategory android:title="@string/text_language">
+        <SwitchPreference
+            android:key="en"
+            android:title="English"
+            android:id="@+id/eng"/>
+        <SwitchPreference
+            android:key="id"
+            android:title="Indonesian"
+            android:id="@+id/ind"
+            />
+        <SwitchPreference
+            android:key="pt"
+            android:title="Portuguese"
+            android:id="@+id/por"
+            />
+        <SwitchPreference
+            android:key="zh"
+            android:title="Chinese"
+            android:id="@+id/chi"
+            />
+    </PreferenceCategory >
+</PreferenceScreen>

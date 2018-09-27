@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="What would you like to perform a workshop repair estimate on?"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp" />
+
+    <RelativeLayout
+        android:id="@+id/wres_btn_chains"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:onClick="createWRES">
+        <TextView
+            android:id="@+id/wres_btn_short_forward"
+            style="@style/wres_black_short_forward_button"
+            android:background="#ff000000"
+            android:text="Chain" />
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="180dp"
+            android:padding="5dp"
+            android:background="@color/uc_white"
+            android:src="@drawable/track_chains"
+            android:layout_below="@+id/wres_btn_short_forward"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <include
+            layout="@layout/wres_bottom_bar">
+        </include>
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/wres_select_existing_chain"
+            android:backgroundTint="@color/uc_white"
+            android:text="Create\nNew Chain"
+            android:layout_alignParentBottom="true"
+            android:onClick="createNewChain" />
+        <Button
+            android:id="@+id/wres_select_existing_chain"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/uc_white"
+            android:backgroundTint="@color/login_button_red"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Select\nExisting Chain"
+            android:onClick="selectExistingChain" />
+    </RelativeLayout>
+</LinearLayout>

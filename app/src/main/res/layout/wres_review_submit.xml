@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/step_fragment_container"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="80dp"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add an overall summary comment"
+                />
+            <EditText
+                android:id="@+id/wres_submit_comment"
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:gravity="left|top"
+                android:verticalScrollbarPosition="right"
+                android:background="@drawable/wres_text_comment"/>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add an overall recommendations"
+                />
+            <EditText
+                android:id="@+id/wres_submit_recommendation"
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:gravity="left|top"
+                android:verticalScrollbarPosition="right"
+                android:background="@drawable/wres_text_comment"/>
+        </LinearLayout>
+    </ScrollView>
+        <include
+            layout="@layout/wres_bottom_bar">
+        </include>
+        <Button
+            android:id="@+id/main_table_next"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/uc_white"
+            android:backgroundTint="@color/login_button_red"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/ic_check_white_24dp"
+            android:text="Finished"
+            android:onClick="wres_save_submit"/>
+    </RelativeLayout>
+</LinearLayout>

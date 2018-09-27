@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myButton"
+    android:text="Assign"
+    android:layout_height="50px"
+    android:layout_width="100px"
+    android:textColor="@color/uc_white"
+    android:textSize="6pt"
+    android:backgroundTint="@color/login_button_red"
+    android:layout_alignParentTop="true"
+    android:onClick="launchInitialDetails"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal" />
+

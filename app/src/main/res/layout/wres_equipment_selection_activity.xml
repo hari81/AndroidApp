@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Select the chain you will be inspecting"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout">
+        <au.com.infotrak.infotrakmobile.controls.ClearableAutoCompleteTextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/autoCustomer"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="50dp"
+            android:hint="Select customer..." />
+
+        <Spinner
+            android:id="@+id/cboJobsite"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/autoCustomer"
+            android:spinnerMode="dialog"
+            android:prompt="@string/Jobsite"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/wres_search_serialno"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:layout_marginBottom="15dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/wres_search_input"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/search_edittext"
+            android:hint="Find by chain serial number"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:gravity="left">
+        </EditText>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <View
+        android:id="@+id/wres_divide_header_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:elevation="2dp"
+        android:background="@drawable/shadow"
+        android:visibility="invisible"/>
+    <TableLayout
+        android:id="@+id/wres_table_header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:visibility="invisible" >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/customer"
+                android:text="CUSTOMER"
+                android:paddingLeft="25dp"
+                android:layout_weight="3"
+                />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/jobsite"
+                android:text="JOBSITE"
+                android:layout_weight="3"
+                />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/serialno"
+                android:text="CHAIN SERIAL NUMBER"
+                android:layout_weight="3"
+                />
+            <TextView
+                style="@style/wres_table_header"
+                android:id="@+id/inspect"
+                android:text=""
+                android:layout_weight="2"
+                />
+        </TableRow>
+    </TableLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scroll_tbl_data"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="70dp">
+            <TableLayout
+                android:id="@+id/wres_main_table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TableLayout>
+        </ScrollView>
+        <include
+            layout="@layout/wres_bottom_bar">
+        </include>
+    </RelativeLayout>
+</LinearLayout>

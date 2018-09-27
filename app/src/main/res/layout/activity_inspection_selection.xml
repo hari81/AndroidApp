@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="What would you like to do?"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="6dp"/>
+    <Button
+        style="@style/wres_black_forward_button"
+        android:id="@+id/btn_old_inspection"
+        android:text="Undercarriage Inspection"
+        android:backgroundTint="@color/uc_black"
+        android:onClick="launchOldInspection" />
+
+    <Button
+        style="@style/wres_black_forward_button"
+        android:id="@+id/btn_wres_inspection"
+        android:backgroundTint="@color/uc_black"
+        android:text="Workshop Repair Estimate"
+        android:onClick="launchWRESInspection" />
+
+</LinearLayout>
